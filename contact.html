@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — PaspasFood</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><div class="logo-icon"><img src="img/icon.png" alt="PaspasFood"></div>PaspasFood</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a><a href="overview.html">Overview</a><a href="services.html">Services</a><a href="how-it-works.html">How It Works</a><a href="roadmap.html">Roadmap</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="download.html" class="nav-cta">Download</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-content">
+
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> Contact</div>
+        <h1>Contact Us</h1>
+        <p>Have questions, want to partner with us, or just want to say hello? We'd love to hear from you.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width:900px;">
+        <div class="grid-2" style="gap:40px;">
+
+          <!-- Contact Info -->
+          <div>
+            <h3 style="font-size:24px;font-weight:800;color:var(--dark);margin-bottom:8px;">Get In Touch</h3>
+            <p style="font-size:15px;color:var(--text-light);line-height:1.7;margin-bottom:32px;">Whether you're a potential store partner, an aspiring rider, an investor, or a curious customer — we're always open to connecting.</p>
+
+            <div class="card contact-card" style="margin-bottom:16px;">
+              <div class="contact-icon">📧</div>
+              <div>
+                <h4>Email</h4>
+                <p><a href="mailto:mabanagmarkjosephf@gmail.com">mabanagmarkjosephf@gmail.com</a></p>
+              </div>
+            </div>
+
+            <div class="card contact-card" style="margin-bottom:16px;">
+              <div class="contact-icon">📱</div>
+              <div>
+                <h4>Phone</h4>
+                <p><a href="tel:09165545934">0916 554 5934</a></p>
+              </div>
+            </div>
+
+            <div class="card contact-card" style="margin-bottom:16px;">
+              <div class="contact-icon">📍</div>
+              <div>
+                <h4>Location</h4>
+                <p>Sindangan, Zamboanga Del Norte<br>Philippines</p>
+              </div>
+            </div>
+
+            <div class="card contact-card">
+              <div class="contact-icon">🕐</div>
+              <div>
+                <h4>Response Time</h4>
+                <p>We typically respond within 24 hours</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div>
+            <h3 style="font-size:24px;font-weight:800;color:var(--dark);margin-bottom:8px;">Send a Message</h3>
+            <p style="font-size:15px;color:var(--text-light);margin-bottom:24px;">Fill out the form below and we'll get back to you.</p>
+
+            <form onsubmit="event.preventDefault(); alert('Thank you for your message! We will get back to you soon.'); this.reset();">
+              <div style="margin-bottom:16px;">
+                <label style="display:block;font-size:13px;font-weight:600;color:var(--dark);margin-bottom:6px;">Full Name</label>
+                <input type="text" required style="width:100%;padding:12px 16px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;font-family:inherit;color:var(--text);outline:none;transition:border 0.2s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'" placeholder="Juan Dela Cruz">
+              </div>
+              <div style="margin-bottom:16px;">
+                <label style="display:block;font-size:13px;font-weight:600;color:var(--dark);margin-bottom:6px;">Email Address</label>
+                <input type="email" required style="width:100%;padding:12px 16px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;font-family:inherit;color:var(--text);outline:none;transition:border 0.2s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'" placeholder="you@example.com">
+              </div>
+              <div style="margin-bottom:16px;">
+                <label style="display:block;font-size:13px;font-weight:600;color:var(--dark);margin-bottom:6px;">I am a...</label>
+                <select required style="width:100%;padding:12px 16px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;font-family:inherit;color:var(--text);outline:none;background:white;transition:border 0.2s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'">
+                  <option value="">Select one...</option>
+                  <option>Potential Customer</option>
+                  <option>Store Owner / Partner</option>
+                  <option>Aspiring Rider</option>
+                  <option>Investor</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div style="margin-bottom:20px;">
+                <label style="display:block;font-size:13px;font-weight:600;color:var(--dark);margin-bottom:6px;">Message</label>
+                <textarea required rows="5" style="width:100%;padding:12px 16px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;font-family:inherit;color:var(--text);outline:none;resize:vertical;transition:border 0.2s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'" placeholder="How can we help you?"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><h3>PaspasFood</h3><p>Fast, Fresh, Delivered. Your local delivery super-app for Sindangan, Zamboanga Del Norte.</p></div>
+        <div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="overview.html">Overview</a><a href="services.html">Services</a><a href="how-it-works.html">How It Works</a></div>
+        <div class="footer-col"><h4>More</h4><a href="roadmap.html">Roadmap</a><a href="faq.html">FAQ</a><a href="download.html">Download</a><a href="contact.html">Contact Us</a></div>
+        <div class="footer-col"><h4>Contact</h4><a href="mailto:mabanagmarkjosephf@gmail.com">mabanagmarkjosephf@gmail.com</a><a href="tel:09165545934">0916 554 5934</a><a>Sindangan, ZDN</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 <span>PaspasFood</span>. All rights reserved.</p><p>Made with 🧡 in Sindangan</p></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
