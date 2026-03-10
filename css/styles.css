@@ -1013,6 +1013,9 @@ ul { list-style: none; }
 
   .page-hero h1 { font-size: 30px; }
   .section { padding: 60px 0; }
+
+  .notify-form { flex-direction: column; }
+  .notify-form input, .notify-form button { width: 100%; }
 }
 
 @media print {

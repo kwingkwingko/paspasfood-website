@@ -35,46 +35,8 @@
 
         <!-- App Preview -->
         <div style="margin-bottom:48px;">
-          <div class="phone-mockup" style="margin:0 auto;">
-            <div class="phone-notch"></div>
-            <div class="phone-screen">
-              <div class="phone-header">
-                <h4>PaspasFood</h4>
-                <p>Fast, Fresh, Delivered.</p>
-              </div>
-              <div class="phone-card">
-                <div class="phone-card-row">
-                  <div class="phone-card-dot" style="background:linear-gradient(135deg,#FF6B00,#FF8C38);"></div>
-                  <div class="phone-card-lines">
-                    <div class="phone-card-line" style="background:#FFE0C2;width:75%;"></div>
-                    <div class="phone-card-line" style="background:#F3F4F6;width:50%;"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="phone-card">
-                <div class="phone-card-row">
-                  <div class="phone-card-dot" style="background:linear-gradient(135deg,#10B981,#34D399);"></div>
-                  <div class="phone-card-lines">
-                    <div class="phone-card-line" style="background:#D1FAE5;width:65%;"></div>
-                    <div class="phone-card-line" style="background:#F3F4F6;width:40%;"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="phone-card">
-                <div class="phone-card-row">
-                  <div class="phone-card-dot" style="background:linear-gradient(135deg,#3B82F6,#60A5FA);"></div>
-                  <div class="phone-card-lines">
-                    <div class="phone-card-line" style="background:#DBEAFE;width:80%;"></div>
-                    <div class="phone-card-line" style="background:#F3F4F6;width:55%;"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="phone-card" style="background:var(--primary);padding:10px 14px;">
-                <div style="display:flex;align-items:center;justify-content:center;gap:8px;">
-                  <span style="color:white;font-size:12px;font-weight:700;">Order Now</span>
-                </div>
-              </div>
-            </div>
+          <div class="app-preview" style="margin:0 auto;max-width:300px;">
+            <img src="img/IMG_6340.png" alt="PaspasFood App" style="width:100%;border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,0.2);border:3px solid #222;">
           </div>
         </div>
 
@@ -117,7 +79,7 @@
           <div style="font-size:36px;margin-bottom:12px;">🔔</div>
           <h3 style="font-size:20px;font-weight:700;color:var(--dark);margin-bottom:8px;">Get Notified on Launch</h3>
           <p style="font-size:14px;color:var(--text-light);margin-bottom:20px;">Be the first to know when PaspasFood is available for download.</p>
-          <form onsubmit="event.preventDefault(); alert('Thank you! We will notify you when PaspasFood launches.'); this.reset();" style="display:flex;gap:10px;">
+          <form class="notify-form" onsubmit="event.preventDefault(); alert('Thank you! We will notify you when PaspasFood launches.'); this.reset();" style="display:flex;gap:10px;">
             <input type="email" required placeholder="your@email.com" style="flex:1;padding:12px 16px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;font-family:inherit;outline:none;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'">
             <button type="submit" class="btn btn-primary" style="padding:12px 24px;white-space:nowrap;">Notify Me</button>
           </form>
