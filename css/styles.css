@@ -1555,6 +1555,65 @@ body[data-screenshot-theme="dark"] .nav-links.open {
   border-top-color: #2e2e38;
 }
 
+/* What's New section */
+body[data-screenshot-theme="dark"] .whats-new-section {
+  background: #0F0F14 !important;
+}
+
+/* Select dropdown options */
+body[data-screenshot-theme="dark"] select option {
+  background: #232330;
+  color: #e4e4e7;
+}
+
+/* Contact form labels */
+body[data-screenshot-theme="dark"] label {
+  color: #e4e4e7;
+}
+body[data-screenshot-theme="dark"] .contact-card {
+  background: #1a1a22;
+  border-color: #2e2e38;
+}
+body[data-screenshot-theme="dark"] .contact-card h4 {
+  color: #f4f4f5;
+}
+body[data-screenshot-theme="dark"] .contact-card p {
+  color: #a1a1aa;
+}
+
+/* Timeline cards in dark */
+body[data-screenshot-theme="dark"] .tl-card {
+  background: #1a1a22;
+  border-color: #2e2e38;
+}
+body[data-screenshot-theme="dark"] .tl-card h3 {
+  color: #f4f4f5;
+}
+body[data-screenshot-theme="dark"] .tl-card p {
+  color: #a1a1aa;
+}
+body[data-screenshot-theme="dark"] .tl-badge.done {
+  background: #0a1a10;
+}
+body[data-screenshot-theme="dark"] .tl-badge.current {
+  background: #1c1408;
+}
+body[data-screenshot-theme="dark"] .tl-badge.next {
+  background: #0a1020;
+}
+body[data-screenshot-theme="dark"] .tl-badge.later {
+  background: #120e20;
+}
+body[data-screenshot-theme="dark"] .tl-badge.vision {
+  background: #0a1618;
+}
+
+/* Screenshot phone frame in dark mode */
+body[data-screenshot-theme="dark"] .screenshot-phone {
+  background: #0a0a0e;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+
 /* Smooth transition */
 body,
 .navbar,
