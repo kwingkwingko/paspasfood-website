@@ -168,60 +168,35 @@ ul {
 .theme-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
+  gap: 5px;
+  padding: 8px 14px;
   border-radius: 100px;
   border: 1.5px solid var(--border);
   background: var(--white);
   cursor: pointer;
   font-family: inherit;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text);
-  transition: all 0.2s ease;
-  margin-right: 4px;
+  font-size: 0;
+  font-weight: 700;
+  color: var(--text-light);
+  transition: all 0.25s ease;
+  margin-right: 8px;
 }
 .theme-toggle:hover {
   border-color: var(--primary);
   background: var(--primary-light);
   color: var(--primary);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(255,107,0,0.15);
 }
 .theme-icon {
   font-size: 16px;
   line-height: 1;
 }
 .theme-label {
-  letter-spacing: 0.3px;
-}
-
-/* Theme toggle */
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  border-radius: 100px;
-  border: 1.5px solid var(--border);
-  background: var(--white);
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text);
-  transition: all 0.2s ease;
-  margin-right: 4px;
-}
-.theme-toggle:hover {
-  border-color: var(--primary);
-  background: var(--primary-light);
-  color: var(--primary);
-}
-.theme-icon {
-  font-size: 16px;
-  line-height: 1;
-}
-.theme-label {
-  letter-spacing: 0.3px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 /* Mobile menu */
