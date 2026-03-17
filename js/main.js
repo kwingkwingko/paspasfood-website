@@ -44,4 +44,34 @@ document.addEventListener('DOMContentLoaded', () => {
       a.classList.add('active');
     }
   });
+
+  // ── App Screenshot Theme Toggle (Light/Dark) ──
+  const themeToggle = document.querySelector('.theme-toggle');
+  if (themeToggle) {
+    const savedTheme = localStorage.getItem('pf-screenshot-theme') || 'dark';
+    applyScreenshotTheme(savedTheme);
+    updateToggleIcon(themeToggle, savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const current = document.body.getAttribute('data-screenshot-theme') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      applyScreenshotTheme(next);
+      updateToggleIcon(themeToggle, next);
+      localStorage.setItem('pf-screenshot-theme', next);
+    });
+  }
+
+  function applyScreenshotTheme(theme) {
+    document.body.setAttribute('data-screenshot-theme', theme);
+    document.querySelectorAll('img[data-dark][data-light]').forEach(img => {
+      img.src = 'img/' + img.getAttribute('data-' + theme);
+    });
+  }
+
+  function updateToggleIcon(btn, theme) {
+    const icon = btn.querySelector('.theme-icon');
+    const label = btn.querySelector('.theme-label');
+    if (icon) icon.textContent = theme === 'dark' ? '🌙' : '☀️';
+    if (label) label.textContent = theme === 'dark' ? 'Dark' : 'Light';
+  }
 });
