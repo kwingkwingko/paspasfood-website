@@ -46,14 +46,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ── App Screenshot Theme Toggle (Light/Dark) ──
+  // Default: "light" (website is light-themed by default)
+  // "dark" activates dark mode CSS overrides + swaps screenshots to dark app images
   const themeToggle = document.querySelector('.theme-toggle');
   if (themeToggle) {
-    const savedTheme = localStorage.getItem('pf-screenshot-theme') || 'dark';
+    const savedTheme = localStorage.getItem('pf-screenshot-theme') || 'light';
     applyScreenshotTheme(savedTheme);
     updateToggleIcon(themeToggle, savedTheme);
 
     themeToggle.addEventListener('click', () => {
-      const current = document.body.getAttribute('data-screenshot-theme') || 'dark';
+      const current = document.body.getAttribute('data-screenshot-theme') || 'light';
       const next = current === 'dark' ? 'light' : 'dark';
       applyScreenshotTheme(next);
       updateToggleIcon(themeToggle, next);
@@ -71,7 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateToggleIcon(btn, theme) {
     const icon = btn.querySelector('.theme-icon');
     const label = btn.querySelector('.theme-label');
-    if (icon) icon.textContent = theme === 'dark' ? '🌙' : '☀️';
-    if (label) label.textContent = theme === 'dark' ? 'Dark' : 'Light';
+    // Show what the CURRENT state is
+    if (theme === 'dark') {
+      if (icon) icon.textContent = '🌙';
+      if (label) label.textContent = 'Dark';
+    } else {
+      if (icon) icon.textContent = '☀️';
+      if (label) label.textContent = 'Light';
+    }
   }
 });
