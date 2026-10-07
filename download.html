@@ -42,7 +42,7 @@
 
         <!-- Store Buttons -->
         <h2 style="font-size:28px;font-weight:800;color:var(--dark);margin-bottom:8px;">Get the App</h2>
-        <p style="font-size:16px;color:var(--text-light);margin-bottom:32px;">PaspasFood will be available on both platforms. Stay tuned!</p>
+        <p style="font-size:16px;color:var(--text-light);margin-bottom:32px;">PaspasFood is live on Google Play. Scan the code or tap the button below. The iOS app is still on its way.</p>
 
         <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:48px;">
           <!-- App Store -->
@@ -60,30 +60,33 @@
           </div>
 
           <!-- Google Play -->
-          <div class="store-btn">
+          <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.kwng.paspasfood" target="_blank" rel="noopener" aria-label="Get PaspasFood on Google Play">
             <div class="store-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M3.18 1.16L13.04 11.02L3.18 20.88C2.95 20.49 2.82 20.04 2.82 19.56V2.48C2.82 2 2.95 1.55 3.18 1.16ZM14.46 12.44L16.81 14.79L5.5 21.24L14.46 12.44ZM17.73 10.56L20.53 12.18C21 12.47 21.27 12.89 21.27 13.35C21.27 13.81 21 14.23 20.53 14.52L17.95 16.01L15.43 13.49L17.73 10.56ZM5.5 0.76L16.81 7.21L14.46 9.56L5.5 0.76Z"/></svg>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M3.18 1.16L13.04 11.02L3.18 20.88C2.95 20.49 2.82 20.04 2.82 19.56V2.48C2.82 2 2.95 1.55 3.18 1.16ZM14.46 12.44L16.81 14.79L5.5 21.24L14.46 12.44ZM17.73 10.56L20.53 12.18C21 12.47 21.27 12.89 21.27 13.35C21.27 13.81 21 14.23 20.53 14.52L17.95 16.01L15.43 13.49L17.73 10.56ZM5.5 0.76L16.81 7.21L14.46 9.56L5.5 0.76Z"/></svg>
             </div>
             <div class="store-text">
               <small>Get it on</small>
               <strong>Google Play</strong>
             </div>
-            <div class="coming-soon-overlay">
-              <div class="coming-soon-tag">Coming Soon</div>
-            </div>
-          </div>
+          </a>
         </div>
 
-        <!-- Notify Me -->
+        <!-- Scan to install -->
         <div style="background:var(--white);border:1px solid var(--border-light);border-radius:20px;padding:40px;max-width:520px;margin:0 auto;">
-          <div style="font-size:36px;margin-bottom:12px;">🔔</div>
-          <h3 style="font-size:20px;font-weight:700;color:var(--dark);margin-bottom:8px;">Get Notified on Launch</h3>
-          <p style="font-size:14px;color:var(--text-light);margin-bottom:20px;">Be the first to know when PaspasFood is available for download.</p>
-          <form class="notify-form" onsubmit="event.preventDefault(); alert('Thank you! We will notify you when PaspasFood launches.'); this.reset();" style="display:flex;gap:10px;">
-          <form class="notify-form" onsubmit="event.preventDefault(); alert('Thank you! We will notify you when PaspasFood launches.'); this.reset();" style="display:flex;gap:10px;">
-            <input type="email" required placeholder="your@email.com" style="flex:1;padding:12px 16px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;font-family:inherit;outline:none;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'">
-            <button type="submit" class="btn btn-primary" style="padding:12px 24px;white-space:nowrap;">Notify Me</button>
-          </form>
+          <h3 style="font-size:20px;font-weight:700;color:var(--dark);margin-bottom:8px;">Scan to install</h3>
+          <p style="font-size:14px;color:var(--text-light);margin-bottom:24px;">Point your phone camera at the code to open PaspasFood on Google Play.</p>
+          <!--
+            The SVG carries its own white background and quiet zone, so it scans
+            on its own. The plate is here because this card goes dark with the
+            theme toggle, and a bare white square floating on a dark card looks
+            like a rendering fault rather than something to point a camera at.
+          -->
+          <a href="https://play.google.com/store/apps/details?id=com.kwng.paspasfood" target="_blank" rel="noopener" style="display:inline-block;background:#fff;padding:16px;border-radius:16px;border:1px solid var(--border-light);">
+            <img src="img/play-store-qr.svg" alt="QR code linking to PaspasFood on Google Play" width="200" height="200" style="display:block;width:200px;height:200px;">
+          </a>
+          <p style="font-size:13px;color:var(--text-light);margin-top:20px;word-break:break-all;">
+            Or open <a href="https://play.google.com/store/apps/details?id=com.kwng.paspasfood" target="_blank" rel="noopener" style="color:var(--primary);font-weight:600;">play.google.com/store/apps/details?id=com.kwng.paspasfood</a>
+          </p>
         </div>
 
       </div>
