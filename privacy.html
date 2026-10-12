@@ -74,7 +74,8 @@
         <p style="color:var(--text-light);line-height:1.7;margin-bottom:16px;">We take reasonable measures to protect your data:</p>
         <ul style="color:var(--text-light);line-height:1.9;margin-bottom:24px;padding-left:20px;">
           <li>Your data is held in a managed PostgreSQL database on DigitalOcean, in their Singapore region, encrypted at rest and reachable only by our own servers</li>
-          <li>Images (profile photos, business images, rider documents, proof of delivery) are stored in DigitalOcean Spaces, uploaded directly from your device over a short-lived, single-use link</li>
+          <li>Images are stored in DigitalOcean Spaces, uploaded directly from your device over a short-lived, single-use link</li>
+          <li>Menu photos, store images and profile pictures are public, because they are shown to everyone browsing the app. Rider documents, government IDs, dispute evidence and proof-of-delivery photos are not: they are kept private, and are shown only to the people involved in that delivery or dispute and to our staff, through a link that expires after a few minutes</li>
           <li>Passwords are never stored. We keep only a scrypt hash, which cannot be reversed into your password</li>
           <li>We do not store card or bank details. Cash on delivery is the only payment method, so there is nothing of that kind to hold</li>
         </ul>
