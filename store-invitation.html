@@ -49,12 +49,20 @@
   .cta .url{font-size:17px;font-weight:700;color:var(--primary-dark);word-break:break-all}
   .cta p{margin:6px 0 0;font-size:14px}
 
+  .ctagrid{display:flex;gap:22px;align-items:flex-start}
+  .ctagrid>div{flex:1;min-width:0}
+  .qr{margin:0;flex:0 0 112px;text-align:center}
+  .qr svg{width:112px;height:112px;display:block;background:#fff;
+    border:1px solid var(--border);border-radius:8px;padding:6px}
+  .qr figcaption{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.35}
+
   footer{padding:16px 48px 30px;color:var(--muted);font-size:12.5px;border-top:1px solid var(--border);margin-top:26px}
 
   @media (max-width:640px){
     .band{padding:26px 22px 22px} .band h1{font-size:30px}
     .inner{padding:26px 22px 34px} footer{padding:16px 22px 26px}
     .benefits{grid-template-columns:1fr} .steps{grid-template-columns:1fr}
+    .ctagrid{flex-direction:column;align-items:center;text-align:center}
   }
 
   @page{size:A4;margin:0}
@@ -67,7 +75,8 @@
     .b .big{font-size:14pt} .b p,.qa p,.s p,.cta p{font-size:9.5pt}
     h2{margin:14px 0 8px;font-size:14pt}
     .qa div{padding:7px 0} .cta{margin-top:14px;padding:12px 16px}
-    .b,.s,.cta,.qa div{page-break-inside:avoid}
+    .b,.s,.cta,.qa div,.qr{page-break-inside:avoid}
+    .qr{flex-basis:26mm} .qr svg{width:26mm;height:26mm} .qr figcaption{font-size:8pt}
     a{color:inherit;text-decoration:none}
   }
 </style>
@@ -136,16 +145,26 @@
 
     <h2>Joining takes about ten minutes</h2>
     <div class="steps">
-      <div class="s"><span>1</span><p>Download <strong>PaspasFood</strong> and register as a <strong>Store</strong>.</p></div>
+      <div class="s"><span>1</span><p>Get <strong>PaspasFood</strong> and register as a <strong>Store</strong>.<br>
+        <b>Android:</b> install it from the Play Store.<br>
+        <b>iPhone:</b> open <strong>paspasfood.com</strong> in Safari, tap Share, then <strong>Add to Home Screen</strong> — it works just like an app.</p></div>
       <div class="s"><span>2</span><p>Send your business details. We review and approve.</p></div>
       <div class="s"><span>3</span><p>We help you load your menu. Then you are open.</p></div>
     </div>
 
     <div class="cta">
-      <div class="h">Come and talk to us first — no commitment</div>
-      <p>We sit down with every shop before they start, walk through how payment works, and answer anything you want to ask. Read the full store guide here:</p>
-      <p class="url">paspasfood.com/guide-store.html</p>
-      <p>Or message <strong>PaspasFood</strong> on Facebook and we will come to you.</p>
+      <div class="ctagrid">
+        <div>
+          <div class="h">Come and talk to us first — no commitment</div>
+          <p>We sit down with every shop before they start, walk through how payment works, and answer anything you want to ask. The full store guide is here:</p>
+          <p class="url">paspasfood.com/guide-store.html</p>
+          <p>Or message <strong>PaspasFood</strong> on Facebook and we will come to you.</p>
+        </div>
+        <figure class="qr">
+          <svg viewBox="0 0 37 37" class="segno"><path class="qrline" stroke="#14141f" d="M4 4.5h7m2 0h4m2 0h1m1 0h4m1 0h7m-29 1h1m5 0h1m2 0h4m1 0h3m1 0h1m1 0h1m1 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m3 0h1m1 0h1m3 0h2m2 0h1m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h1m4 0h1m3 0h1m3 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h1m2 0h1m1 0h3m1 0h1m3 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m1 0h2m1 0h1m1 0h1m1 0h1m1 0h3m2 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-20 1h1m4 0h1m2 0h4m-21 1h1m2 0h1m1 0h2m1 0h1m1 0h2m1 0h4m2 0h1m1 0h1m1 0h1m-24 1h2m2 0h1m4 0h4m4 0h2m1 0h3m2 0h1m2 0h1m-28 1h3m1 0h3m2 0h4m2 0h1m2 0h1m4 0h4m-25 1h1m3 0h1m1 0h8m1 0h1m1 0h1m5 0h2m-26 1h2m2 0h1m3 0h3m1 0h1m1 0h2m2 0h4m1 0h1m1 0h2m-29 1h5m2 0h2m3 0h1m6 0h2m-21 1h3m3 0h5m5 0h3m3 0h1m2 0h4m-29 1h1m1 0h1m2 0h1m4 0h2m1 0h1m3 0h2m1 0h1m1 0h2m1 0h1m1 0h1m-25 1h4m1 0h3m1 0h3m1 0h2m2 0h2m1 0h1m3 0h1m-26 1h1m1 0h2m8 0h1m1 0h1m3 0h4m1 0h1m2 0h1m-29 1h1m1 0h1m1 0h4m2 0h1m2 0h1m6 0h5m2 0h2m-27 1h3m3 0h1m2 0h3m3 0h1m2 0h2m1 0h1m3 0h2m-29 1h1m3 0h3m1 0h3m3 0h3m3 0h5m1 0h1m-19 1h1m1 0h2m1 0h1m2 0h2m1 0h2m3 0h1m1 0h3m-29 1h7m3 0h2m1 0h2m5 0h1m1 0h1m1 0h1m2 0h1m-28 1h1m5 0h1m1 0h2m1 0h1m1 0h1m1 0h2m1 0h1m1 0h1m3 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h2m1 0h1m1 0h1m2 0h2m1 0h5m2 0h2m-29 1h1m1 0h3m1 0h1m1 0h1m1 0h1m2 0h2m4 0h2m1 0h6m-28 1h1m1 0h3m1 0h1m5 0h1m4 0h1m1 0h2m3 0h3m1 0h1m-29 1h1m5 0h1m2 0h2m1 0h2m3 0h4m1 0h2m3 0h1m-28 1h7m1 0h1m1 0h1m2 0h1m2 0h2m2 0h3m1 0h1m2 0h1"/></svg>
+          <figcaption>Scan for the<br>full store guide</figcaption>
+        </figure>
+      </div>
     </div>
 
   </div>
