@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PaspasFood — An invitation to Sindangan shops</title>
+<meta name="description" content="Sell to customers across Sindangan. No commission, no joining fee, and the rider pays you in cash at pickup." />
+<style>
+  :root{
+    --primary:#ff6b00; --primary-dark:#e55d00; --primary-light:#fff7ed;
+    --ink:#14141f; --body:#3b4452; --muted:#6b7280;
+    --border:#e5e7eb; --green:#16a34a; --green-bg:#f0fdf4;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:#f4f4f5;color:var(--body);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  .sheet{max-width:820px;margin:0 auto;background:#fff}
+
+  .band{background:var(--primary);color:#fff;padding:30px 48px 26px}
+  .band .name{font-size:15px;font-weight:800;letter-spacing:3px;text-transform:uppercase;opacity:.95}
+  .band h1{font-size:40px;line-height:1.08;margin:12px 0 8px;letter-spacing:-1.2px;font-weight:800}
+  .band p{margin:0;font-size:17px;opacity:.97;max-width:52ch}
+
+  .inner{padding:34px 48px 44px}
+
+  .benefits{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 28px}
+  .b{border:1px solid var(--border);border-left:5px solid var(--primary);border-radius:10px;padding:16px 18px}
+  .b .big{display:block;font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-.3px;margin-bottom:3px}
+  .b p{margin:0;font-size:14px}
+  .b.wide{grid-column:1/-1;border-left-color:var(--green);background:var(--green-bg)}
+  .b.wide .big{color:#14532d}
+
+  h2{font-size:19px;color:var(--ink);margin:30px 0 12px;letter-spacing:-.3px}
+  .qa{border-top:1px solid var(--border)}
+  .qa div{border-bottom:1px solid var(--border);padding:12px 0}
+  .qa b{display:block;color:var(--ink);font-size:15px;margin-bottom:2px}
+  .qa p{margin:0;font-size:14px}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0 0}
+  .s{background:#fafafa;border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+  .s span{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;
+    border-radius:50%;background:var(--primary);color:#fff;font-weight:800;font-size:14px;margin-bottom:7px}
+  .s p{margin:0;font-size:13.5px}
+
+  .cta{margin-top:26px;border:2px solid var(--primary);border-radius:12px;
+    padding:20px 24px;background:var(--primary-light)}
+  .cta .h{font-size:19px;font-weight:800;color:var(--ink);margin-bottom:4px;letter-spacing:-.3px}
+  .cta .url{font-size:17px;font-weight:700;color:var(--primary-dark);word-break:break-all}
+  .cta p{margin:6px 0 0;font-size:14px}
+
+  footer{padding:16px 48px 30px;color:var(--muted);font-size:12.5px;border-top:1px solid var(--border);margin-top:26px}
+
+  @media (max-width:640px){
+    .band{padding:26px 22px 22px} .band h1{font-size:30px}
+    .inner{padding:26px 22px 34px} footer{padding:16px 22px 26px}
+    .benefits{grid-template-columns:1fr} .steps{grid-template-columns:1fr}
+  }
+
+  @page{size:A4;margin:0}
+  @media print{
+    body{background:#fff;font-size:10.5pt;line-height:1.42}
+    .sheet{max-width:none}
+    .band{padding:18mm 16mm 9mm} .band h1{font-size:30pt} .band p{font-size:12pt}
+    .inner{padding:8mm 16mm 6mm} footer{padding:6mm 16mm 0}
+    .benefits{gap:8px;margin-bottom:16px} .b{padding:10px 13px}
+    .b .big{font-size:14pt} .b p,.qa p,.s p,.cta p{font-size:9.5pt}
+    h2{margin:14px 0 8px;font-size:14pt}
+    .qa div{padding:7px 0} .cta{margin-top:14px;padding:12px 16px}
+    .b,.s,.cta,.qa div{page-break-inside:avoid}
+    a{color:inherit;text-decoration:none}
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+
+  <div class="band">
+    <div class="name">PaspasFood</div>
+    <h1>Sell to the whole of Sindangan.<br>Keep every peso of it.</h1>
+    <p>We are the local delivery app. We would like your shop on it — and we do not take a cut of what you sell.</p>
+  </div>
+
+  <div class="inner">
+
+    <div class="benefits">
+      <div class="b wide">
+        <span class="big">You are paid in cash, at pickup</span>
+        <p>When our rider collects an order, they pay you for it <strong>there and then, in cash</strong> — before the food leaves your shop. No waiting for a payout, no chasing anybody, no money tied up with a company you have never met.</p>
+      </div>
+      <div class="b">
+        <span class="big">No commission</span>
+        <p>We take nothing from your sales. The price you set is the money you receive.</p>
+      </div>
+      <div class="b">
+        <span class="big">Nothing to join</span>
+        <p>No joining fee, no monthly fee, no equipment to buy. Just your phone.</p>
+      </div>
+      <div class="b">
+        <span class="big">New customers</span>
+        <p>People across town who would never walk past your door can now order from you.</p>
+      </div>
+      <div class="b">
+        <span class="big">You stay in control</span>
+        <p>Your prices, your hours, your menu. Close the shop in the app whenever you need to.</p>
+      </div>
+    </div>
+
+    <h2>The questions shop owners actually ask</h2>
+    <div class="qa">
+      <div>
+        <b>So how do you make money?</b>
+        <p>From the riders, not from you. A rider buys a small credit to accept each job. Your sale is yours.</p>
+      </div>
+      <div>
+        <b>When exactly do I get paid?</b>
+        <p>At pickup. The rider hands you cash for the food before they leave with it. The customer pays the rider at their door — that is between the two of them.</p>
+      </div>
+      <div>
+        <b>What if I am too busy to take orders?</b>
+        <p>Mark your store closed in the app, in one tap. Orders stop. Open again when you are ready.</p>
+      </div>
+      <div>
+        <b>Do I need a computer or a printer?</b>
+        <p>No. A phone is enough. A small Bluetooth receipt printer is handy once you are busy, but it is optional.</p>
+      </div>
+      <div>
+        <b>Who handles the delivery?</b>
+        <p>Our riders. You prepare the order and hand it over — the trip, the customer and the cash collection are ours to manage.</p>
+      </div>
+      <div>
+        <b>What does it cost me if an order is cancelled?</b>
+        <p>Nothing, if it has not been made yet. You can decline an order you cannot fulfil.</p>
+      </div>
+    </div>
+
+    <h2>Joining takes about ten minutes</h2>
+    <div class="steps">
+      <div class="s"><span>1</span><p>Download <strong>PaspasFood</strong> and register as a <strong>Store</strong>.</p></div>
+      <div class="s"><span>2</span><p>Send your business details. We review and approve.</p></div>
+      <div class="s"><span>3</span><p>We help you load your menu. Then you are open.</p></div>
+    </div>
+
+    <div class="cta">
+      <div class="h">Come and talk to us first — no commitment</div>
+      <p>We sit down with every shop before they start, walk through how payment works, and answer anything you want to ask. Read the full store guide here:</p>
+      <p class="url">paspasfood.com/guide-store.html</p>
+      <p>Or message <strong>PaspasFood</strong> on Facebook and we will come to you.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <strong>PaspasFood</strong> · Sindangan, Zamboanga del Norte · paspasfood.com<br>
+    Terms apply and are published at paspasfood.com. Fees and commission rates may change; current values are always shown in the app. Payment to stores is made by the rider in cash at pickup.
+  </footer>
+
+</main>
+</body>
+</html>
