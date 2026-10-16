@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Order, End to End — PaspasFood</title>
+  <meta name="description" content="One PaspasFood order from tap to receipt: what the customer, the store and the rider each do, what the app does in between, where the money moves, and what happens when something goes wrong.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <style>
+    .fb-ico{vertical-align:-.14em;flex:none}
+
+    /* The spine. One vertical line, one numbered marker per stage. */
+    .flow{max-width:900px;margin:0 auto;position:relative}
+    .flow::before{content:'';position:absolute;left:19px;top:8px;bottom:8px;width:2px;background:var(--border,#e8e8e8)}
+    .stage{position:relative;padding-left:60px;margin-bottom:34px}
+    .stage:last-child{margin-bottom:0}
+    .stage .num{position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;
+      background:var(--primary);color:#fff;font-weight:800;font-size:15px;
+      display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 5px var(--bg,#fff)}
+    .stage h3{font-size:18px;font-weight:800;color:var(--dark);margin:6px 0 4px}
+    .stage .who{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.04em;
+      text-transform:uppercase;padding:3px 9px;border-radius:999px;margin-bottom:8px}
+    .who.cust{background:#EFF6FF;color:#1D4ED8}
+    .who.store{background:#FFF7ED;color:#C2410C}
+    .who.rider{background:#ECFDF5;color:#047857}
+    .who.sys{background:#F5F3FF;color:#6D28D9}
+    .stage p{font-size:14.5px;color:var(--text-light);line-height:1.85;margin:0 0 10px}
+    .stage ul{margin:0 0 10px;padding-left:20px;font-size:14px;color:var(--text-light);line-height:1.9}
+    .sys-note{background:var(--bg);border-left:3px solid var(--primary);border-radius:0 10px 10px 0;
+      padding:12px 16px;font-size:13.5px;color:var(--text-light);line-height:1.8;margin:10px 0 0}
+    .sys-note strong{color:var(--dark)}
+    .money{background:#ECFDF5;border:1px solid #A7F3D0;border-radius:10px;padding:12px 16px;
+      font-size:13.5px;color:#065F46;line-height:1.8;margin:10px 0 0}
+    .wrong{background:#FEF2F2;border:1px solid #FECACA;border-radius:10px;padding:12px 16px;
+      font-size:13.5px;color:#991B1B;line-height:1.8;margin:10px 0 0}
+    .legend{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:34px}
+    .status-table{width:100%;border-collapse:collapse;font-size:13.5px}
+    .status-table th,.status-table td{border:1px solid var(--border,#e8e8e8);padding:9px 12px;text-align:left;vertical-align:top;line-height:1.7}
+    .status-table th{background:var(--bg);font-weight:700;color:var(--dark)}
+    .status-table code{font-size:12.5px;background:var(--bg);padding:1px 6px;border-radius:5px}
+
+    @media print{
+      .navbar,.footer,.nav-toggle,.theme-toggle,.no-print{display:none !important}
+      body{background:#fff;font-size:11pt}
+      .section{padding:8px 0 !important;background:#fff !important}
+      .stage,.status-table{page-break-inside:avoid}
+      a{color:inherit;text-decoration:none}
+    }
+    @media (max-width:640px){
+      .flow::before{left:15px}
+      .stage{padding-left:48px}
+      .stage .num{width:32px;height:32px;font-size:13px}
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><div class="logo-icon"><img src="img/icon.png" alt="PaspasFood"></div>PaspasFood</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a><a href="overview.html">Overview</a><a href="services.html">Services</a><a href="how-it-works.html">How It Works</a><a href="roadmap.html">Roadmap</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><button class="theme-toggle" aria-label="Toggle app screenshot theme"><span class="theme-icon">🌙</span><span class="theme-label">Dark</span></button><a href="download.html" class="nav-cta">Download</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-content">
+
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> Order Flow</div>
+        <h1>The Order, End to End</h1>
+        <p>
+          One order, from the tap that places it to the receipt in an inbox &mdash; what each of the
+          three people does, what the app does in between, and where the money actually moves.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container">
+        <div class="legend">
+          <span class="who cust">Customer</span>
+          <span class="who store">Store</span>
+          <span class="who rider">Rider</span>
+          <span class="who sys">PaspasFood</span>
+        </div>
+
+        <div class="flow">
+
+          <!-- 1 -->
+          <div class="stage">
+            <div class="num">1</div>
+            <span class="who cust">Customer</span>
+            <h3>Places the order</h3>
+            <p>
+              Basket, delivery address, landmark if the gate is hard to find, then confirm. The
+              total on that screen &mdash; food, delivery fee, any surcharge &mdash; is what will be
+              handed over at the door, in cash. Nothing is added afterwards.
+            </p>
+            <div class="sys-note">
+              <strong>What the app does.</strong> A first-time customer is asked to verify their
+              mobile number by SMS before the order can go through. The server then recalculates
+              every figure for itself &mdash; prices, fees, coupon, delivery zone, stock &mdash;
+              rather than trusting what the phone sent, so a tampered-with app cannot name its own
+              price. The store is alerted, and <strong>the alert repeats until it is answered</strong>,
+              because an order missed on a counter is an order nobody cooks.
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="stage">
+            <div class="num">2</div>
+            <span class="who store">Store</span>
+            <h3>Accepts, or declines</h3>
+            <p>
+              The store sees the items, the quantities and any notes. Accepting puts the order in
+              their queue; declining frees the customer to order elsewhere straight away.
+            </p>
+            <div class="money">
+              <strong>Money.</strong> Accepting records what the store will earn on this order. It
+              is not paid yet &mdash; the cash arrives at pickup, from the rider.
+            </div>
+            <div class="wrong">
+              <strong>Customer can still cancel.</strong> Nothing has been cooked. Cancelling here
+              costs nobody anything.
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="stage">
+            <div class="num">3</div>
+            <span class="who store">Store</span>
+            <h3>Starts preparing, and says how long</h3>
+            <p>
+              Tapping <strong>Start Preparing</strong> requires a time &mdash; 5 to 45 minutes. It
+              is not a formality: the customer's arrival estimate is calculated from it, and a rider
+              is sent to reach the counter as the food finishes rather than to stand and wait.
+            </p>
+            <div class="sys-note">
+              <strong>A revision extends the countdown, it does not collapse it.</strong> Falling
+              behind is normal; the store updates the time and the new one counts from the moment it
+              is set, with the customer told immediately. The app stores a duration and when it was
+              set, never a fixed ready-time, so a revision means &ldquo;another fifteen minutes from
+              now&rdquo; and not &ldquo;fifteen minutes from whenever you first said&rdquo;.
+            </div>
+            <div class="wrong">
+              <strong>The customer can no longer cancel from the app.</strong> Ingredients are
+              committed. Cancelling now goes through the store or support.
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="stage">
+            <div class="num">4</div>
+            <span class="who rider">Rider</span>
+            <h3>Takes the job &mdash; while the food is still cooking</h3>
+            <p>
+              The job appears on the board <strong>as soon as the store starts preparing</strong>,
+              not when the food is ready. The card shows the shop, the drop-off, the distance and
+              what the job pays, so a rider can judge it before accepting.
+            </p>
+            <div class="money">
+              <strong>Money.</strong> Accepting <strong>holds</strong> one PaspasPoint. It is not
+              spent yet: completing the job uses it, and giving the job back for a reason on the
+              list releases it.
+            </div>
+            <div class="sys-note">
+              <strong>Arriving early is expected.</strong> If the order is not ready, the rider taps
+              <em>I&rsquo;m at the store</em> and the counter is told someone is waiting.
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="stage">
+            <div class="num">5</div>
+            <span class="who rider">Rider</span>
+            <span class="who store">Store</span>
+            <h3>Hand-over, and the rider pays</h3>
+            <p>
+              The store hands over the order and the rider pays for the food <strong>in cash, out of
+              their own pocket</strong>. The amount is the food subtotal on the Store Copy, printed
+              under the words <strong>RIDER PAYS</strong> &mdash; never the customer's total, which
+              is a bigger number containing the rider's own wages.
+            </p>
+            <ul>
+              <li>Check the bag against the slip <em>before</em> paying. Afterwards a missing item is a conversation, not a correction.</li>
+              <li>The Customer Copy travels in the bag; it is the customer's receipt.</li>
+            </ul>
+            <div class="money">
+              <strong>Money.</strong> The store is now paid, in full, in cash &mdash; before the
+              food has left the shop. PaspasFood takes no commission from it.
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="stage">
+            <div class="num">6</div>
+            <span class="who rider">Rider</span>
+            <h3>On the way</h3>
+            <p>
+              The customer is told the order has been picked up, and can follow the rider on the map,
+              read the landmark they wrote, and message them in the app without either party seeing
+              the other's personal number.
+            </p>
+          </div>
+
+          <!-- 7 -->
+          <div class="stage">
+            <div class="num">7</div>
+            <span class="who rider">Rider</span>
+            <span class="who cust">Customer</span>
+            <h3>Delivered, and paid</h3>
+            <p>
+              The customer pays the total shown in the app &mdash; the figure they agreed to at
+              step 1 &mdash; and the rider keeps the difference between that and what they paid the
+              shop. <strong>A proof photo is required</strong>; the job cannot be completed without
+              one.
+            </p>
+            <div class="money">
+              <strong>Money.</strong> The rider has already been paid, out of the cash in their hand,
+              so nothing is owed to them afterwards and there is nothing to withdraw. The held point
+              is used at this moment. The earning is recorded for their history and their reports.
+            </div>
+            <div class="sys-note">
+              <strong>An itemised receipt is emailed to the customer</strong>, showing what was
+              ordered and every fee that made up the total.
+            </div>
+          </div>
+
+          <!-- 8 -->
+          <div class="stage">
+            <div class="num">8</div>
+            <span class="who cust">Customer</span>
+            <h3>Rates the store and the rider</h3>
+            <p>
+              A review can only be left by the person who received that order. It is published with
+              the reviewer&rsquo;s initials &mdash; <strong>M***** S*****</strong> &mdash; never
+              their full name and never their photo.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WHEN IT GOES WRONG -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">The other paths</p>
+          <h2 class="section-title">When It Does Not Go Like That</h2>
+          <p class="section-desc">Most orders follow the eight steps. These are the ones that do not.</p>
+        </div>
+
+        <div style="max-width:900px;margin:0 auto;">
+          <table class="status-table">
+            <tr>
+              <th style="width:26%">What happened</th>
+              <th>What the platform does</th>
+            </tr>
+            <tr>
+              <td><strong>Nobody takes the job</strong></td>
+              <td>The store is prompted after a while and decides whether to cancel or wait. An order is <strong>never</strong> cancelled automatically &mdash; we do not stop a kitchen that is already cooking.</td>
+            </tr>
+            <tr>
+              <td><strong>The store cannot fulfil it</strong></td>
+              <td>The store cancels with a reason. The customer is told what it was and is charged nothing. A rider who had already taken the job keeps their point.</td>
+            </tr>
+            <tr>
+              <td><strong>The rider gives the job back</strong></td>
+              <td>The point is returned where the job could not be done &mdash; order not ready after a long wait, customer unreachable, address wrong, unsafe to continue &mdash; and used where they simply changed their mind. The app decides from the reason chosen and says which before they leave the screen.</td>
+            </tr>
+            <tr>
+              <td><strong>Nobody is at the door</strong></td>
+              <td>The rider reports it in the app before leaving. Where they went to the address given, tried to reach the customer through the app and waited a reasonable time, <strong>PaspasFood reimburses what they paid the shop and pays the delivery fee</strong>. The goods stay with the rider.</td>
+            </tr>
+            <tr>
+              <td><strong>The customer refuses the order</strong></td>
+              <td>Same reimbursement for the rider. The customer may be asked to pay for the goods, and repeated incidents can suspend the account.</td>
+            </tr>
+            <tr>
+              <td><strong>Something is wrong with the food</strong></td>
+              <td>Report it in the app with the order number. The store is responsible for what it sold; we investigate and tell you what we decided.</td>
+            </tr>
+          </table>
+
+          <p style="font-size:13px;color:var(--text-light);line-height:1.8;margin:18px 0 0;">
+            The binding version of all of this is in the
+            <a href="terms.html" style="color:var(--primary);font-weight:600;">Terms &amp; Conditions</a>
+            &mdash; cancellations and failed deliveries in section 8, PaspasPoints in section 7.
+            Fees and limits are set in the app and shown before you confirm.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATUSES -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Reference</p>
+          <h2 class="section-title">The Status Names You Will See</h2>
+          <p class="section-desc">The same order, as each screen labels it.</p>
+        </div>
+
+        <div style="max-width:900px;margin:0 auto;">
+          <table class="status-table">
+            <tr><th style="width:22%">Status</th><th style="width:39%">The customer sees</th><th>The store and rider see</th></tr>
+            <tr><td><code>placed</code></td><td>Waiting for the store to accept</td><td>A new order, alerting until answered</td></tr>
+            <tr><td><code>accepted</code></td><td>&ldquo;The store has accepted your order&rdquo;</td><td>In the queue, not yet started</td></tr>
+            <tr><td><code>preparing</code></td><td>A countdown, and an arrival estimate</td><td>Cooking &mdash; and on the job board for riders</td></tr>
+            <tr><td><code>ready_for_delivery</code></td><td>Still preparing or ready, depending on the rider</td><td>Waiting at the counter for the rider</td></tr>
+            <tr><td><code>picked_up</code></td><td>&ldquo;Picked up and on its way&rdquo;</td><td>Paid for, in the rider&rsquo;s hands</td></tr>
+            <tr><td><code>on_the_way</code></td><td>The rider on the map</td><td>Navigating to the drop-off</td></tr>
+            <tr><td><code>delivered</code></td><td>&ldquo;Delivered. Enjoy!&rdquo; and a receipt by email</td><td>Complete; the point is used and the earning recorded</td></tr>
+            <tr><td><code>cancelled</code></td><td>The cancellation and its reason</td><td>Ended, with who ended it and why</td></tr>
+          </table>
+
+          <p style="font-size:13px;color:var(--text-light);line-height:1.8;margin:18px 0 0;">
+            A <strong>pickup</strong> order skips the rider entirely: it goes from
+            <code>preparing</code> to <code>ready_for_pickup</code>, and to <code>claimed</code>
+            when the customer collects it. A <strong>Pasugo</strong> errand has its own flow &mdash;
+            the rider buys from a shop that is not on the platform &mdash; described on the
+            <a href="for-riders.html" style="color:var(--primary);font-weight:600;">rider guide</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-primary-light no-print">
+      <div class="container" style="text-align:center;">
+        <h2 style="font-size:26px;font-weight:800;color:var(--dark);margin-bottom:10px;">Questions about an order?</h2>
+        <p style="font-size:15px;color:var(--text-light);margin-bottom:22px;">
+          Use Help Center inside the app and include the order number &mdash; it begins with a #.
+        </p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Contact Support</a>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><h3>PaspasFood</h3><p>Fast, Fresh, Delivered. Your local delivery super-app for Sindangan, Zamboanga Del Norte.</p></div>
+        <div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="overview.html">Overview</a><a href="services.html">Services</a><a href="how-it-works.html">How It Works</a><a href="order-flow.html">Order Flow</a></div>
+        <div class="footer-col"><h4>More</h4><a href="for-riders.html">Rider Guide</a><a href="for-stores.html">Store Guide</a><a href="roadmap.html">Roadmap</a><a href="faq.html">FAQ</a><a href="download.html">Download</a><a href="contact.html">Contact Us</a></div>
+        <div class="footer-col"><h4>Legal</h4><a href="terms.html">Terms &amp; Conditions</a><a href="privacy.html">Data Policy</a><a href="delete-account.html">Delete Your Account</a><a href="mailto:support@paspasfood.com">support@paspasfood.com</a>
+          <a href="https://www.facebook.com/profile.php?id=61584945630572" target="_blank" rel="noopener"><svg class="fb-ico" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg> Facebook</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 <span>PaspasFood</span>. All rights reserved.</p><p>Made with 🧡 in Sindangan</p></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
