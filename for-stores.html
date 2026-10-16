@@ -4,10 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Store Guide — PaspasFood</title>
-  <meta name="description" content="How to sell on PaspasFood in Sindangan: setting up your store, adding products, taking orders, and how you get paid.">
+  <meta name="description" content="The complete PaspasFood Store Partner guide for Sindangan: setting up, taking orders, how you get paid, working with riders, the rules, and what the platform costs. Printable.">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="img/favicon.png" type="image/png">
-  <style>.fb-ico{vertical-align:-.14em;flex:none}</style>
+  <style>
+    .fb-ico{vertical-align:-.14em;flex:none}
+
+    /* Ported from the printed Store Guide, which this page now contains. */
+    .doc-table{width:100%;border-collapse:collapse;margin:0 0 16px;font-size:14px}
+    .doc-table th,.doc-table td{border:1px solid var(--border,#e8e8e8);padding:10px 12px;text-align:left;vertical-align:top;line-height:1.7}
+    .doc-table th{background:var(--bg);font-weight:700;color:var(--dark);width:26%}
+    .receipt{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;white-space:pre;background:var(--bg);border-radius:12px;padding:18px 20px;overflow-x:auto;line-height:1.7}
+    .sig{margin-top:28px;padding:20px;border:1px dashed var(--border,#d8d8d8);border-radius:12px}
+    .sig .line{border-bottom:1px solid #999;height:34px;margin-top:18px}
+
+    @media print{
+      .navbar,.footer,.nav-toggle,.theme-toggle,.no-print{display:none !important}
+      body{background:#fff;font-size:11.5pt;line-height:1.5}
+      .section{padding:10px 0 !important;background:#fff !important}
+      .page-header{padding:0 0 10px !important}
+      .card,.doc-table,.sig,.receipt{page-break-inside:avoid}
+      h2,h3,h4{page-break-after:avoid}
+      .print-break{page-break-before:always}
+      a{color:inherit;text-decoration:none}
+    }
+  </style>
 </head>
 <body>
 
@@ -226,11 +247,24 @@
                   <li>Flash &mdash; it flattens the food and shines off the plate</li>
                   <li>Clutter: tissues, phones, other people's hands</li>
                   <li>Photos taken from the internet &mdash; customers notice</li>
+                  <li>Another store's photo of the same dish, even a better one</li>
+                  <li>AI-generated food, or edits that grow the portion</li>
                   <li>Screenshots or pictures of a printed menu</li>
                   <li>Dark, blurry shots taken in a hurry at night</li>
                 </ul>
               </div>
             </div>
+          </div>
+
+          <div style="margin-top:20px;background:var(--bg);border-radius:14px;padding:22px 24px;">
+            <h4 style="font-size:16px;font-weight:800;color:var(--dark);margin:0 0 8px;">Where AI fits</h4>
+            <p style="font-size:14px;color:var(--text-light);margin:0;line-height:1.8;">
+              Use it on the <strong>photo</strong>, not on the <strong>food</strong>. Brightening a
+              dim shot, tidying a background or sharpening a blurry one is genuinely useful and we
+              have no objection to it. Generating a dish you do not serve, or editing a portion until
+              it looks bigger than what leaves your kitchen, is a different thing &mdash; and it is
+              the customer who finds out, at their door, after they have paid.
+            </p>
           </div>
 
           <div style="margin-top:20px;background:#FFF7ED;border:1px solid #FFE4C7;border-radius:14px;padding:18px 20px;">
@@ -244,7 +278,232 @@
       </div>
     </section>
 
-    <section class="section section-primary-light">
+    <!-- PRINTABLE DOCUMENTS -->
+    <section class="section section-white" id="documents">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">At the counter</p>
+          <h2 class="section-title">The Three Documents You Can Print</h2>
+          <p class="section-desc">Which one is which, and which one you settle against.</p>
+        </div>
+        <div style="max-width:880px;margin:0 auto;">
+          <table class="doc-table">
+            <tr><th>Order Slip</th><td>What to prepare &mdash; items, quantities, add-ons and notes, with <strong>no prices</strong>. For your kitchen or counter staff.</td></tr>
+            <tr><th>Store Copy</th><td>What the rider owes you. <strong>Food only.</strong> This is the one to settle against.</td></tr>
+            <tr><th>Customer Copy</th><td>The customer&rsquo;s receipt, showing everything they paid. Put it in the bag.</td></tr>
+          </table>
+          <p style="font-size:14px;color:var(--text-light);line-height:1.9;margin-bottom:18px;">
+            Printing works with a Bluetooth thermal printer on Android &mdash; pair it once in Store
+            Settings and afterwards it is one tap. On iPhone and the web app, printing opens your
+            device&rsquo;s normal print dialogue instead.
+          </p>
+
+          <h4 style="font-size:17px;font-weight:800;color:var(--dark);margin:0 0 8px;">Why the customer pays more than you receive</h4>
+          <p style="font-size:14px;color:var(--text-light);line-height:1.9;margin-bottom:14px;">
+            The customer&rsquo;s total includes the delivery fee, any weather surcharge and any tip.
+            <strong>Those belong to the rider</strong>, who is repaying themselves for the cash they
+            just handed you and earning their wage for the trip. Asking a rider for the customer&rsquo;s
+            total means asking them to hand over their own pay.
+          </p>
+          <div class="receipt">Subtotal                        PHP 497.00
+Delivery fee                    PHP  62.00
+Weather surcharge               PHP  15.00
+Rider tip                       PHP  10.00
+================================================
+Customer pays the rider         PHP 584.00
+RIDER PAYS YOU                  PHP 497.00   &lt;-- yours</div>
+          <p style="font-size:14px;color:var(--text-light);line-height:1.9;margin:14px 0 0;">
+            Your order screen shows both figures: <em>Customer pays rider</em>, and below it
+            <em>Rider pays you</em>. The second is the one you collect.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RULES -->
+    <section class="section print-break" id="rules">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">The agreement</p>
+          <h2 class="section-title">Rules for Stores</h2>
+          <p class="section-desc">The binding version is <a href="terms.html" style="color:var(--primary);font-weight:600;">section 9 of the Terms</a>; this is the same thing in plain words.</p>
+        </div>
+        <div style="max-width:880px;margin:0 auto;">
+          <ul style="margin:0;padding-left:20px;font-size:14px;color:var(--text-light);line-height:2.1;">
+            <li>Keep your menu, prices and availability accurate. A customer charged for something out of stock loses trust in all of us.</li>
+            <li>Accept or decline an order promptly. A rider and a customer are both waiting on it.</li>
+            <li><strong>Give an honest preparation time</strong> when you start preparing. The customer&rsquo;s arrival time is calculated from it, and a rider is sent to reach you as it finishes.</li>
+            <li><strong>If you fall behind, update the preparation time</strong> from the order screen. The new time counts from the moment you set it, and the customer sees it immediately.</li>
+            <li>Mark your store closed when you are not trading, rather than letting orders arrive unanswered.</li>
+            <li>Prepare orders to the same standard as a walk-in customer, and pack them so they survive the trip.</li>
+            <li>Hand the rider exactly what is on the slip. <strong>If something is unavailable, say so before they pay.</strong></li>
+            <li><strong>If an item is out of stock, ask the customer before you change anything.</strong> A substitution they did not agree to &mdash; especially a cheaper one &mdash; is the complaint we cannot defend on your behalf.</li>
+            <li>Observe food safety and hygiene requirements, and keep your permits current.</li>
+            <li>Do not ask a rider for more than the Store Copy says.</li>
+            <li>Do not take payment outside the platform for an order placed on it.</li>
+            <li>Use a customer&rsquo;s or rider&rsquo;s name, address and number for that order only. Not for marketing, not passed on, and never posted publicly.</li>
+            <li>Do not ask a customer or a rider for a good review, and do not offer anything in exchange for one.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIDERS -->
+    <section class="section section-white" id="riders">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">At your counter</p>
+          <h2 class="section-title">Working With Riders</h2>
+          <p class="section-desc">They are paying you with their own money.</p>
+        </div>
+        <div style="max-width:880px;margin:0 auto;">
+          <p style="font-size:15px;color:var(--text-light);line-height:1.9;margin-bottom:16px;">
+            A rider is not your employee and not ours either &mdash; they are running their own small
+            business, and on most orders they are <strong>paying you out of their own pocket</strong>
+            before anyone has paid them. That is worth holding in mind at the counter.
+          </p>
+          <ul style="margin:0;padding-left:20px;font-size:14px;color:var(--text-light);line-height:2.1;">
+            <li><strong>Treat every rider the same,</strong> whether the order is &#8369;80 or &#8369;800 and whether the drop is nearby or across town.</li>
+            <li><strong>Serve them promptly when they arrive.</strong> They are usually holding another job behind this one.</li>
+            <li><strong>No abuse, no discrimination, no threats.</strong> This is the one that ends a partnership fastest.</li>
+            <li><strong>Do not ask a rider to do anything else</strong> &mdash; fetch something, wait for a second order, run an errand for the store. They are paid for the job they accepted.</li>
+            <li><strong>Tell them what is happening if you are behind.</strong> A rider who knows the order is ten minutes away can plan; one standing in silence cannot.</li>
+            <li><strong>Make the pickup point safe and reachable.</strong> Somewhere they can stop, be seen and be served.</li>
+            <li><strong>Never make a rider pay for your mistake</strong> &mdash; a missing item, a cancelled order, a wrong price. Raise it with support and we will look at what happened.</li>
+          </ul>
+          <p style="font-size:14px;color:var(--text-light);line-height:1.9;margin:16px 0 0;">
+            If a rider behaves badly towards you, report it the same way: in the app under
+            <strong>Profile &rarr; Help Center</strong>. It works in both directions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CANCELLATIONS -->
+    <section class="section" id="cancellations">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">When it goes wrong</p>
+          <h2 class="section-title">Cancellations</h2>
+        </div>
+        <div style="max-width:880px;margin:0 auto;">
+          <p style="font-size:15px;color:var(--text-light);line-height:1.9;margin-bottom:14px;">
+            If you cannot fulfil an order, cancel it in the app as early as you can and give the
+            reason. Cancelling reverses the earning for that order.
+          </p>
+          <p style="font-size:15px;color:var(--text-light);line-height:1.9;margin-bottom:22px;">
+            If an order sits with no rider for a long time, we will prompt you. <strong>You</strong>
+            decide whether to cancel it or contact the customer &mdash; we will not cancel your order
+            automatically and leave you with food nobody asked you to stop making.
+          </p>
+
+          <h4 style="font-size:17px;font-weight:800;color:var(--dark);margin:0 0 10px;">Losing your partnership</h4>
+          <p style="font-size:14px;color:var(--text-light);line-height:1.9;margin-bottom:10px;">A store account may be suspended or removed for:</p>
+          <ul style="margin:0;padding-left:20px;font-size:14px;color:var(--text-light);line-height:2;">
+            <li>Dishonesty about an order, an item or a payment.</li>
+            <li>Demanding more money from a rider than the Store Copy states.</li>
+            <li>Persistently listing items that are not available.</li>
+            <li>Food safety or hygiene failures.</li>
+            <li>Abusive or discriminatory behaviour towards riders, customers or staff.</li>
+            <li>Taking payment outside the platform for an order placed on it.</li>
+            <li>Changing or substituting items without asking the customer.</li>
+            <li>Misusing a customer&rsquo;s or rider&rsquo;s personal information.</li>
+            <li>Photographs that misrepresent what is actually sold.</li>
+          </ul>
+          <p style="font-size:14px;color:var(--text-light);line-height:1.9;margin:14px 0 0;">
+            Serious or repeated breaches may lead to a warning, a temporary restriction, or
+            suspension &mdash; after the situation has been reviewed and, where practicable, with a
+            chance to respond. If something goes wrong, contact support in the app &mdash;
+            <strong>Profile &rarr; Help Center</strong> &mdash; and include the order number; it
+            begins with a <strong>#</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Store Partners</p>
+          <h2 class="section-title">What It Costs</h2>
+          <p class="section-desc">Nothing, during our launch period.</p>
+        </div>
+
+        <div style="max-width:880px;margin:0 auto;">
+          <div class="grid-2" style="gap:20px;">
+            <div class="card" style="padding:26px;">
+              <h4 style="font-size:17px;font-weight:800;color:var(--dark);margin-bottom:10px;">Free while we grow</h4>
+              <p style="font-size:14px;color:var(--text-light);line-height:1.9;margin:0;">
+                No subscription fee. No platform fee. <strong>No commission on what you sell.</strong>
+                The food subtotal shown on your Store Copy is yours in full &mdash; the rider hands it
+                to you in cash at pickup.
+              </p>
+            </div>
+            <div class="card" style="padding:26px;">
+              <h4 style="font-size:17px;font-weight:800;color:var(--dark);margin-bottom:10px;">If that ever changes</h4>
+              <p style="font-size:14px;color:var(--text-light);line-height:1.9;margin:0;">
+                You get <strong>at least 30 days&rsquo; notice</strong>, with the rate, the terms and
+                the start date. <strong>Nothing is charged backwards</strong> for orders already
+                completed under the free period, and you decide whether to carry on.
+              </p>
+            </div>
+          </div>
+          <p style="font-size:13px;color:var(--text-light);line-height:1.8;margin:18px 0 0;text-align:center;">
+            This is a promotional arrangement, not a permanent one &mdash; and the notice period is
+            written into <a href="terms.html" style="color:var(--primary);font-weight:600;">section 10
+            of the Terms</a> rather than only promised here.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ONBOARDING -->
+    <section class="section section-white" id="meeting">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Onboarding</p>
+          <h2 class="section-title">Before Your Meeting</h2>
+        </div>
+        <div style="max-width:880px;margin:0 auto;">
+          <p style="font-size:15px;color:var(--text-light);line-height:1.9;margin-bottom:12px;">
+            Please bring your <strong>business permit</strong>, a <strong>valid ID</strong>, and your
+            <strong>menu with current prices</strong>.
+          </p>
+          <p style="font-size:15px;color:var(--text-light);line-height:1.9;margin-bottom:12px;">
+            Photographs of your best-selling items help enormously &mdash; customers order far more
+            from a menu they can see.
+          </p>
+          <p style="font-size:15px;color:var(--text-light);line-height:1.9;margin-bottom:12px;">
+            One step catches people out when applying: <strong>finish the email verification</strong>.
+            An application that stops there reaches us with your documents missing.
+          </p>
+          <p style="font-size:15px;color:var(--text-light);line-height:1.9;margin-bottom:22px;">
+            Write down anything here you disagree with or do not understand. The meeting is the right
+            place to settle it.
+          </p>
+
+          <div class="sig">
+            <p style="font-size:14px;color:var(--dark);font-weight:700;margin:0;">Acknowledgement &mdash; to be completed at your onboarding meeting.</p>
+            <p style="font-size:13px;color:var(--text-light);line-height:1.8;margin:6px 0 0;">
+              I have read this guide and understand how payment works, what I am responsible for, how
+              riders are to be treated, and what PaspasFood does and does not cover.
+            </p>
+            <div class="line"></div>
+            <p style="font-size:12px;color:var(--text-light);margin:6px 0 0;">Name and signature &nbsp;&middot;&nbsp; Date</p>
+          </div>
+
+          <p style="font-size:12px;color:var(--text-light);line-height:1.8;margin:22px 0 0;">
+            This guide explains how the platform works in everyday terms. It sits alongside our
+            <a href="terms.html" style="color:var(--primary);font-weight:600;">Terms &amp; Conditions</a>
+            and <a href="privacy.html" style="color:var(--primary);font-weight:600;">Data Policy</a>,
+            which are the binding documents. Where this guide and the Terms differ, the Terms apply.
+            Fees and limits may change; current values are always shown in the app.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-primary-light no-print">
       <div class="container" style="text-align:center;">
         <h2 style="font-size:26px;font-weight:800;color:var(--dark);margin-bottom:10px;">Need a hand?</h2>
         <p style="font-size:15px;color:var(--text-light);margin-bottom:22px;">

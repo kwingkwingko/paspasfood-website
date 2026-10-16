@@ -4,10 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rider Guide — PaspasFood</title>
-  <meta name="description" content="How to earn as a PaspasFood rider in Sindangan: signing up, PaspasPoints, accepting jobs, and how you get paid.">
+  <meta name="description" content="The complete PaspasFood rider guide for Sindangan: signing up, PaspasPoints, how the money moves, the cash you need to start, cancellations, and the rules. Printable.">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="img/favicon.png" type="image/png">
-  <style>.fb-ico{vertical-align:-.14em;flex:none}</style>
+  <style>
+    .fb-ico{vertical-align:-.14em;flex:none}
+
+    /* Ported from the printed Rider Guide, which this page now contains. */
+    .doc-table{width:100%;border-collapse:collapse;margin:0 0 16px;font-size:14px}
+    .doc-table th,.doc-table td{border:1px solid var(--border,#e8e8e8);padding:10px 12px;text-align:left;vertical-align:top;line-height:1.7}
+    .doc-table th{background:var(--bg);font-weight:700;color:var(--dark);width:38%}
+    .doc-table td.yes{color:#15803D;font-weight:700;width:120px}
+    .doc-table td.no{color:#B91C1C;font-weight:700;width:120px}
+    .sig{margin-top:28px;padding:20px;border:1px dashed var(--border,#d8d8d8);border-radius:12px}
+    .sig .line{border-bottom:1px solid #999;height:34px;margin-top:18px}
+
+    @media print{
+      .navbar,.footer,.nav-toggle,.theme-toggle,.no-print{display:none !important}
+      body{background:#fff;font-size:11.5pt;line-height:1.5}
+      .section{padding:10px 0 !important;background:#fff !important}
+      .page-header{padding:0 0 10px !important}
+      .card,.doc-table,.sig{page-break-inside:avoid}
+      h2,h3,h4{page-break-after:avoid}
+      .print-break{page-break-before:always}
+      a{color:inherit;text-decoration:none}
+    }
+  </style>
 </head>
 <body>
 
@@ -47,7 +69,7 @@
           <div class="card step-card">
             <div class="step-number">1</div>
             <h4>Sign up as a rider</h4>
-            <p>Install the app, create an account and choose <strong>Rider</strong>. You will need a mobile number, your vehicle type, and your driver's licence number.</p>
+            <p>Install the app, create an account and choose <strong>Rider</strong>. You will need a mobile number, your vehicle type, your driver's licence number, a photo of the licence itself and a selfie holding it. <strong>Finish the email verification step</strong> &mdash; an application that stops there reaches us with your documents missing, and it is the most common reason an application appears to vanish.</p>
           </div>
           <div class="card step-card">
             <div class="step-number">2</div>
@@ -91,6 +113,12 @@
         </div>
         <div style="max-width:860px;margin:20px auto 0;background:#FFF7ED;border:1px solid #FFE4C7;border-radius:14px;padding:18px 20px;">
           <p style="font-size:14px;color:#9A3412;margin:0;line-height:1.7;">
+            Points are bought at the PaspasFood office: request the number you want in the app, then
+            bring the money. <strong>Requesting is not buying</strong> &mdash; they are credited once
+            payment has actually been received. They <strong>never expire</strong>, and they are
+            <strong>not refundable, not transferable and have no cash value</strong>, so buy what you
+            expect to use. A price change never affects points you have already paid for.
+            <br><br>
             <strong>At zero points you cannot accept work.</strong> The job board will look empty or
             every job will refuse to open. That is not a bug &mdash; top up from the Points screen and
             they come back.
@@ -368,7 +396,163 @@
       </div>
     </section>
 
-    <section class="section section-primary-light">
+    <!-- WORKING CASH -->
+    <section class="section section-white" id="cash">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Before your first shift</p>
+          <h2 class="section-title">The Cash You Need to Start</h2>
+          <p class="section-desc">You pay the store before anyone pays you.</p>
+        </div>
+        <div style="max-width:880px;margin:0 auto;">
+          <p style="font-size:15px;color:var(--text-light);line-height:1.9;margin-bottom:16px;">
+            Because you pay the store first and are repaid at the door, you need money in your pocket
+            before you earn any. An order averages around <strong>&#8369;200</strong>, and you may hold
+            <strong>two jobs at once</strong> &mdash; so plan for roughly <strong>&#8369;400 of working
+            cash</strong> per shift, plus your points. A large order needs more.
+          </p>
+          <p style="font-size:15px;color:var(--text-light);line-height:1.9;margin:0;">
+            This is a real requirement, and we would rather you knew it now than found out at a counter.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CANCELLED JOBS -->
+    <section class="section print-break" id="cancelled">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">PaspasPoints</p>
+          <h2 class="section-title">If a Job Is Cancelled</h2>
+          <p class="section-desc">Whether your point comes back, and why.</p>
+        </div>
+        <div style="max-width:880px;margin:0 auto;">
+          <table class="doc-table">
+            <tr><th style="width:auto">What happened</th><th style="width:120px">Your point</th></tr>
+            <tr><td>The customer cancels before you collect the food</td><td class="yes">Returned</td></tr>
+            <tr><td>The store cancels</td><td class="yes">Returned</td></tr>
+            <tr><td>PaspasFood cancels, or the order cannot be fulfilled</td><td class="yes">Returned</td></tr>
+            <tr><td>The customer refuses the delivery</td><td class="yes">Returned</td></tr>
+            <tr><td>You give the job back because <strong>it could not be done</strong> &mdash; the store cannot provide the order, it was not ready after a long wait, the customer cannot be reached, or the address is wrong or unreachable</td><td class="yes">Returned</td></tr>
+            <tr><td>You stop for <strong>safety or an emergency</strong> &mdash; an accident, a breakdown, severe weather, or a personal emergency</td><td class="yes">Returned</td></tr>
+            <tr><td><strong>You give the job back by choice</strong> &mdash; the distance or the traffic &mdash; or you choose &ldquo;Other&rdquo; instead of a reason from the list</td><td class="no">Used</td></tr>
+          </table>
+          <p style="font-size:14px;color:var(--text-light);line-height:1.9;margin-bottom:12px;">
+            <strong>Choose the reason from the list.</strong> The app decides from that choice straight
+            away and tells you whether your point came back before you leave the screen &mdash; you do
+            not need to contact support for an ordinary problem. Typing your own reason under
+            &ldquo;Other&rdquo; always uses the point, so pick the one that fits.
+          </p>
+          <p style="font-size:14px;color:var(--text-light);line-height:1.9;margin-bottom:12px;">
+            A point is used when you simply change your mind, because while you held that job nobody
+            else could take it and the customer waited. It is not used when the job became impossible,
+            or when stopping was the right thing to do &mdash; we would rather you stopped.
+          </p>
+          <div style="background:#FEF2F2;border:1px solid #FECACA;border-radius:14px;padding:18px 20px;">
+            <p style="font-size:14px;color:#991B1B;margin:0;line-height:1.8;">
+              <strong>A returned point does not return money you already paid a store.</strong> That is
+              what <a href="#safety" style="color:#991B1B;font-weight:700;">checking before you pay</a> is for.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RULES -->
+    <section class="section section-white" id="rules">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">The agreement</p>
+          <h2 class="section-title">Rules for Riders</h2>
+          <p class="section-desc">Short, and all of them matter.</p>
+        </div>
+        <div style="max-width:880px;margin:0 auto;">
+          <ul style="margin:0;padding-left:20px;font-size:14px;color:var(--text-light);line-height:2.1;">
+            <li>Hold no more than <strong>two active jobs</strong> at a time &mdash; food orders and Pasugo errands counted together. The app will not let you take a third until one is finished.</li>
+            <li><strong>A photo is required as proof of delivery.</strong> You cannot complete a job without one.</li>
+            <li>Check the order against the slip before you pay the store. Once you have paid, a wrong or missing item is yours to resolve with them.</li>
+            <li>Do not open, consume, substitute or tamper with an order.</li>
+            <li>Do not ask a customer for more than the total shown in the app, for any reason.</li>
+            <li>Keep your phone reachable while you hold a job. Customers are told they can contact you.</li>
+            <li>Treat customers and store staff courteously, whatever the situation. If a store treats you badly, report it &mdash; <strong>stores are held to the same standard</strong> under <a href="terms.html" style="color:var(--primary);font-weight:600;">section 9 of the Terms</a>.</li>
+            <li>Obey traffic law. Wear a helmet. No delivery is worth an injury.</li>
+            <li>Your account is yours. Do not let anyone else ride on it.</li>
+          </ul>
+
+          <h4 style="font-size:17px;font-weight:800;color:var(--dark);margin:28px 0 10px;">Losing your account</h4>
+          <p style="font-size:14px;color:var(--text-light);line-height:1.9;margin-bottom:10px;">An account may be suspended or removed for:</p>
+          <ul style="margin:0;padding-left:20px;font-size:14px;color:var(--text-light);line-height:2;">
+            <li>Dishonesty about an order, a delivery or a payment.</li>
+            <li>Collecting or demanding more money than the app states.</li>
+            <li>Repeatedly cancelling accepted jobs without good reason.</li>
+            <li>Abusive, threatening or discriminatory behaviour towards anyone.</li>
+            <li>Tampering with orders, or delivering goods that are unsafe.</li>
+            <li>Letting someone else use your account.</li>
+            <li>Taking payment outside the platform for a job arranged on it.</li>
+          </ul>
+          <p style="font-size:14px;color:var(--text-light);line-height:1.9;margin:14px 0 0;">
+            If something goes wrong, contact support in the app &mdash; <strong>Profile &rarr; Help
+            Center</strong> &mdash; or message our
+            <a href="https://www.facebook.com/profile.php?id=61584945630572" target="_blank" rel="noopener" style="color:var(--primary);font-weight:600;">Facebook page</a>.
+            Report problems while they are fresh and include the order number; it begins with a <strong>#</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ONBOARDING -->
+    <section class="section" id="meeting">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Onboarding</p>
+          <h2 class="section-title">Before Your Meeting</h2>
+        </div>
+        <div style="max-width:880px;margin:0 auto;">
+          <p style="font-size:15px;color:var(--text-light);line-height:1.9;margin-bottom:12px;">
+            Please bring your <strong>driver&rsquo;s licence</strong>, a <strong>valid ID</strong>, and
+            your phone with the app installed.
+          </p>
+          <p style="font-size:15px;color:var(--text-light);line-height:1.9;margin-bottom:12px;">
+            Come ready to discuss two things: how many points you want to start with, and how much
+            working cash you can comfortably carry on a shift.
+          </p>
+          <p style="font-size:15px;color:var(--text-light);line-height:1.9;margin-bottom:22px;">
+            Write down anything here you disagree with or do not understand. The meeting is the right
+            place to settle it.
+          </p>
+
+          <div style="background:var(--bg);border-radius:16px;padding:24px;">
+            <h4 style="font-size:16px;font-weight:800;color:var(--dark);margin:0 0 8px;">One last word</h4>
+            <p style="font-size:14px;color:var(--text-light);line-height:1.9;margin:0;">
+              These rules exist because real money moves between real people with no bank in the
+              middle. You front your own cash; a store hands over food before being paid by a customer
+              they never meet. That only works while everyone is straight with each other, and we
+              would rather be clear about it now than apologetic about it later.
+            </p>
+          </div>
+
+          <div class="sig">
+            <p style="font-size:14px;color:var(--dark);font-weight:700;margin:0;">Acknowledgement &mdash; to be completed at your onboarding meeting.</p>
+            <p style="font-size:13px;color:var(--text-light);line-height:1.8;margin:6px 0 0;">
+              I have read this guide and understand how payment works, what cash I need to carry, what
+              I am responsible for, and what PaspasFood does and does not cover.
+            </p>
+            <div class="line"></div>
+            <p style="font-size:12px;color:var(--text-light);margin:6px 0 0;">Name and signature &nbsp;&middot;&nbsp; Date</p>
+          </div>
+
+          <p style="font-size:12px;color:var(--text-light);line-height:1.8;margin:22px 0 0;">
+            This guide explains how the platform works in everyday terms. It sits alongside our
+            <a href="terms.html" style="color:var(--primary);font-weight:600;">Terms &amp; Conditions</a>
+            and <a href="privacy.html" style="color:var(--primary);font-weight:600;">Data Policy</a>,
+            which are the binding documents. Where this guide and the Terms differ, the Terms apply.
+            Fees, point prices and limits may change; current values are always shown in the app.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-primary-light no-print">
       <div class="container" style="text-align:center;">
         <h2 style="font-size:26px;font-weight:800;color:var(--dark);margin-bottom:10px;">Still stuck?</h2>
         <p style="font-size:15px;color:var(--text-light);margin-bottom:22px;">
