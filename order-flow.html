@@ -284,8 +284,12 @@
               <th>What the platform does</th>
             </tr>
             <tr>
+              <td><strong>The store never answers</strong></td>
+              <td>After <strong>15 minutes</strong> with no reply, the order is cancelled for the customer rather than leaving them waiting on a shop that is closed or busy. Nothing has been cooked and nothing is charged. The customer is told by notification <strong>and by email</strong>, because somebody who ordered and put their phone down is the one least likely to see a notification. A scheduled order is left alone.</td>
+            </tr>
+            <tr>
               <td><strong>Nobody takes the job</strong></td>
-              <td>The store is prompted after a while and decides whether to cancel or wait. An order is <strong>never</strong> cancelled automatically &mdash; we do not stop a kitchen that is already cooking.</td>
+              <td>Different, and deliberately so: the store has <em>accepted</em> by this point and the food exists. The store is prompted after a while and decides whether to cancel or wait. An accepted order is <strong>never</strong> cancelled automatically &mdash; we do not stop a kitchen that is already cooking.</td>
             </tr>
             <tr>
               <td><strong>The store cannot fulfil it</strong></td>
@@ -331,7 +335,7 @@
         <div style="max-width:900px;margin:0 auto;">
           <table class="status-table">
             <tr><th style="width:22%">Status</th><th style="width:39%">The customer sees</th><th>The store and rider see</th></tr>
-            <tr><td><code>placed</code></td><td>Waiting for the store to accept</td><td>A new order, alerting until answered</td></tr>
+            <tr><td><code>placed</code></td><td>Waiting for the store to accept &mdash; cancelled after 15 minutes if it is not</td><td>A new order, alerting until answered</td></tr>
             <tr><td><code>accepted</code></td><td>&ldquo;The store has accepted your order&rdquo;</td><td>In the queue, not yet started</td></tr>
             <tr><td><code>preparing</code></td><td>A countdown, and an arrival estimate</td><td>Cooking &mdash; and on the job board for riders</td></tr>
             <tr><td><code>ready_for_delivery</code></td><td>Still preparing or ready, depending on the rider</td><td>Waiting at the counter for the rider</td></tr>
