@@ -120,16 +120,24 @@
           </div>
 
           <!--
-            Said plainly rather than buried. Someone who installs this and then
-            waits for a notification that never comes will conclude the app is
-            broken, and they will be right to.
+            This box used to say the web version could not send notifications
+            at all. It can, since web push shipped -- and faq.html has always
+            promised an alert at each stage, so the two pages disagreed.
+
+            What survives is narrower and still worth saying plainly: on iPhone
+            ONLY AN INSTALLED PWA MAY SUBSCRIBE. A Safari tab cannot, which is
+            why step 4 above is not optional. See `needsInstall()` in
+            mobile-delivery/src/services/webPush.ts. Someone who browses in a
+            tab and waits for a notification that never comes will conclude the
+            app is broken, and they would be right to.
           -->
           <div style="margin-top:28px;background:#FFF7ED;border:1px solid #FFE4C7;border-radius:14px;padding:18px 20px;">
             <p style="font-size:14px;color:#9A3412;margin:0;line-height:1.7;">
-              <strong>One difference worth knowing:</strong> the web version cannot send push
-              notifications, so you will not get an alert when your order is accepted or when the
-              rider is on the way. Open the app to check your order status. Everything else &mdash;
-              ordering, Pasugo, addresses and payment on delivery &mdash; works the same.
+              <strong>Finish step 4, or you will get no notifications.</strong> The web version
+              alerts you when your order is accepted and when your rider is on the way &mdash; but
+              only from the icon on your Home Screen, never from a Safari tab. Open it there once
+              and tap <strong>Allow</strong> when it asks about notifications. Everything else
+              &mdash; ordering, Pasugo, addresses and payment on delivery &mdash; works the same.
             </p>
           </div>
 
