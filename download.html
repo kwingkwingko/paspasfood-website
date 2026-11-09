@@ -79,11 +79,14 @@
             theme toggle, and a bare white square floating on a dark card looks
             like a rendering fault rather than something to point a camera at.
 
-            The App Store code carries the logo in the middle; the other two do
-            not. It is generated at error correction level H with the mark over
-            4.8% of the code's area, and it was decoded back to the exact
-            listing URL before it shipped -- a logo that stops a code scanning
-            fails silently, in someone's hand, in front of them.
+            Both codes carry the PaspasFood mark in the middle. Each is
+            generated at error correction level H -- App Store version 6, with
+            the mark over 4.8% of the code's area; Google Play version 8, 3.4%
+            -- and each was rasterised and decoded back to its exact store URL
+            before it shipped, at render size, at 2x, blurred, recompressed as
+            a low-quality JPEG, rotated and in greyscale. A logo that stops a
+            code scanning fails silently, in someone's hand, in front of them,
+            so the generator's own word is not enough.
           -->
           <div style="display:flex;gap:36px;justify-content:center;flex-wrap:wrap;">
             <div>
@@ -99,91 +102,8 @@
               <p style="font-size:13px;font-weight:700;color:var(--dark);margin-top:12px;">Android &mdash; Google Play</p>
             </div>
           </div>
-          <p style="font-size:13px;color:var(--text-light);margin-top:24px;word-break:break-all;">
-            Or open <a href="https://apps.apple.com/ph/app/paspasfood/id6830440827" target="_blank" rel="noopener" style="color:var(--primary);font-weight:600;">apps.apple.com/ph/app/paspasfood/id6830440827</a><br>
-            or <a href="https://play.google.com/store/apps/details?id=com.kwng.paspasfood" target="_blank" rel="noopener" style="color:var(--primary);font-weight:600;">play.google.com/store/apps/details?id=com.kwng.paspasfood</a>
-          </p>
         </div>
 
-      </div>
-    </section>
-
-    <!-- IPHONE -->
-    <section class="section section-white">
-      <div class="container">
-        <div style="max-width:720px;margin:0 auto;">
-          <div style="text-align:center;margin-bottom:28px;">
-            <h2 style="font-size:28px;font-weight:800;color:var(--dark);margin-bottom:8px;">Already using the web version on iPhone?</h2>
-            <p style="font-size:16px;color:var(--text-light);">
-              <a href="https://apps.apple.com/ph/app/paspasfood/id6830440827" target="_blank" rel="noopener" style="color:var(--primary);font-weight:700;">PaspasFood is on the App Store</a>
-              &mdash; that is the one to get. The web version is still here and still works, so nothing
-              breaks if you carry on using it, or if you would rather not install from a store at all.
-            </p>
-          </div>
-
-          <!--
-            THE PWA IS NOT A LEFTOVER AND MUST NOT BE REMOVED. It is what every
-            iPhone customer has been using, and Platform.OS is 'web' there, so
-            appleSignInAvailable() returns false and Sign in with Apple never
-            renders -- see src/services/auth.ts in mobile-delivery. An account
-            created with Apple on the native app therefore cannot sign in here.
-            That asymmetry is below, in one sentence, because somebody will hit
-            it otherwise and conclude their account was deleted.
-          -->
-          <div style="margin-bottom:28px;background:#EFF6FF;border:1px solid #BFDBFE;border-radius:14px;padding:18px 20px;">
-            <p style="font-size:14px;color:#1E40AF;margin:0;line-height:1.7;">
-              <strong>One thing to know before you pick.</strong> <strong>Sign in with Apple</strong>
-              only exists in the App Store app. An account you create with it will not open the web
-              version &mdash; there is no Apple button there to sign in with. If you want to use both,
-              sign in with <strong>Google</strong> or with an <strong>email and password</strong>.
-              Everything else &mdash; your orders, addresses, Pasugo and paying on delivery &mdash;
-              is the same account either way.
-            </p>
-          </div>
-
-          <h3 style="font-size:18px;font-weight:800;color:var(--dark);margin:0 0 14px;text-align:center;">Installing the web version</h3>
-
-          <div style="display:flex;gap:32px;flex-wrap:wrap;align-items:center;justify-content:center;">
-            <!-- Scanning is easier than typing a URL on the phone you are installing to. -->
-            <a href="https://paspasfood-app.vercel.app" target="_blank" rel="noopener" style="display:inline-block;background:#fff;padding:14px;border-radius:16px;border:1px solid var(--border-light);">
-              <img src="img/web-app-qr.svg" alt="QR code to open the PaspasFood web app" width="170" height="170" style="display:block;width:170px;height:170px;">
-            </a>
-
-            <ol style="margin:0;padding-left:20px;flex:1;min-width:260px;font-size:15px;color:var(--text-light);line-height:1.9;">
-              <li>Open <a href="https://paspasfood-app.vercel.app" target="_blank" rel="noopener" style="color:var(--primary);font-weight:600;">paspasfood-app.vercel.app</a> in <strong style="color:var(--dark);">Safari</strong></li>
-              <li>Tap the <strong style="color:var(--dark);">Share</strong> button at the bottom</li>
-              <li>Choose <strong style="color:var(--dark);">Add to Home Screen</strong></li>
-              <li>Open PaspasFood from your Home Screen</li>
-            </ol>
-          </div>
-
-          <!--
-            This box used to say the web version could not send notifications
-            at all. It can, since web push shipped -- and faq.html has always
-            promised an alert at each stage, so the two pages disagreed.
-
-            What survives is narrower and still worth saying plainly: on iPhone
-            ONLY AN INSTALLED PWA MAY SUBSCRIBE. A Safari tab cannot, which is
-            why step 4 above is not optional. See `needsInstall()` in
-            mobile-delivery/src/services/webPush.ts. Someone who browses in a
-            tab and waits for a notification that never comes will conclude the
-            app is broken, and they would be right to.
-          -->
-          <div style="margin-top:28px;background:#FFF7ED;border:1px solid #FFE4C7;border-radius:14px;padding:18px 20px;">
-            <p style="font-size:14px;color:#9A3412;margin:0;line-height:1.7;">
-              <strong>Finish step 4, or you will get no notifications.</strong> The web version
-              alerts you when your order is accepted and when your rider is on the way &mdash; but
-              only from the icon on your Home Screen, never from a Safari tab. Open it there once
-              and tap <strong>Allow</strong> when it asks about notifications. Everything else
-              &mdash; ordering, Pasugo, addresses and payment on delivery &mdash; works the same.
-            </p>
-          </div>
-
-          <p style="font-size:13px;color:var(--text-light);text-align:center;margin-top:18px;">
-            It must be opened in <strong>Safari</strong> &mdash; Chrome on iPhone has no
-            &ldquo;Add to Home Screen&rdquo;.
-          </p>
-        </div>
       </div>
     </section>
 
