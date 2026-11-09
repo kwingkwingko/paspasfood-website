@@ -26,7 +26,7 @@
       <div class="container">
         <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> Download</div>
         <h1>Download PaspasFood</h1>
-        <p>Get the app on your favorite platform. Available soon on iOS and Android.</p>
+        <p>Get the app on your favorite platform. PaspasFood is live on the App Store and on Google Play.</p>
       </div>
     </section>
 
@@ -43,11 +43,11 @@
 
         <!-- Store Buttons -->
         <h2 style="font-size:28px;font-weight:800;color:var(--dark);margin-bottom:8px;">Get the App</h2>
-        <p style="font-size:16px;color:var(--text-light);margin-bottom:32px;">PaspasFood is live on Google Play. Scan the code or tap the button below. The iOS app is still on its way.</p>
+        <p style="font-size:16px;color:var(--text-light);margin-bottom:32px;">PaspasFood is live on the App Store and on Google Play. Tap your platform below, or scan the matching code with your phone camera.</p>
 
         <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:48px;">
           <!-- App Store -->
-          <div class="store-btn">
+          <a class="store-btn" href="https://apps.apple.com/ph/app/paspasfood/id6830440827" target="_blank" rel="noopener" aria-label="Download PaspasFood on the App Store">
             <div class="store-icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.99 2.97 12.5 4.7 9.56C5.55 8.1 7.13 7.17 8.82 7.15C10.1 7.13 11.32 8.01 12.11 8.01C12.91 8.01 14.37 6.95 15.92 7.11C16.57 7.14 18.39 7.38 19.56 9.07C19.47 9.13 17.29 10.39 17.31 13.02C17.34 16.14 20.05 17.16 20.08 17.17C20.05 17.24 19.64 18.62 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
             </div>
@@ -55,10 +55,7 @@
               <small>Download on the</small>
               <strong>App Store</strong>
             </div>
-            <div class="coming-soon-overlay">
-              <div class="coming-soon-tag">Coming Soon</div>
-            </div>
-          </div>
+          </a>
 
           <!-- Google Play -->
           <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.kwng.paspasfood" target="_blank" rel="noopener" aria-label="Get PaspasFood on Google Play">
@@ -73,20 +70,38 @@
         </div>
 
         <!-- Scan to install -->
-        <div style="background:var(--white);border:1px solid var(--border-light);border-radius:20px;padding:40px;max-width:520px;margin:0 auto;">
+        <div style="background:var(--white);border:1px solid var(--border-light);border-radius:20px;padding:40px;max-width:720px;margin:0 auto;">
           <h3 style="font-size:20px;font-weight:700;color:var(--dark);margin-bottom:8px;">Scan to install</h3>
-          <p style="font-size:14px;color:var(--text-light);margin-bottom:24px;">Point your phone camera at the code to open PaspasFood on Google Play.</p>
+          <p style="font-size:14px;color:var(--text-light);margin-bottom:28px;">Point your phone camera at the code for your phone.</p>
           <!--
-            The SVG carries its own white background and quiet zone, so it scans
+            Each SVG carries its own white background and quiet zone, so it scans
             on its own. The plate is here because this card goes dark with the
             theme toggle, and a bare white square floating on a dark card looks
             like a rendering fault rather than something to point a camera at.
+
+            The App Store code carries the logo in the middle; the other two do
+            not. It is generated at error correction level H with the mark over
+            4.8% of the code's area, and it was decoded back to the exact
+            listing URL before it shipped -- a logo that stops a code scanning
+            fails silently, in someone's hand, in front of them.
           -->
-          <a href="https://play.google.com/store/apps/details?id=com.kwng.paspasfood" target="_blank" rel="noopener" style="display:inline-block;background:#fff;padding:16px;border-radius:16px;border:1px solid var(--border-light);">
-            <img src="img/play-store-qr.svg" alt="QR code linking to PaspasFood on Google Play" width="200" height="200" style="display:block;width:200px;height:200px;">
-          </a>
-          <p style="font-size:13px;color:var(--text-light);margin-top:20px;word-break:break-all;">
-            Or open <a href="https://play.google.com/store/apps/details?id=com.kwng.paspasfood" target="_blank" rel="noopener" style="color:var(--primary);font-weight:600;">play.google.com/store/apps/details?id=com.kwng.paspasfood</a>
+          <div style="display:flex;gap:36px;justify-content:center;flex-wrap:wrap;">
+            <div>
+              <a href="https://apps.apple.com/ph/app/paspasfood/id6830440827" target="_blank" rel="noopener" style="display:inline-block;background:#fff;padding:16px;border-radius:16px;border:1px solid var(--border-light);">
+                <img src="img/app-store-qr.svg" alt="QR code linking to PaspasFood on the App Store" width="200" height="200" style="display:block;width:200px;height:200px;">
+              </a>
+              <p style="font-size:13px;font-weight:700;color:var(--dark);margin-top:12px;">iPhone &mdash; App Store</p>
+            </div>
+            <div>
+              <a href="https://play.google.com/store/apps/details?id=com.kwng.paspasfood" target="_blank" rel="noopener" style="display:inline-block;background:#fff;padding:16px;border-radius:16px;border:1px solid var(--border-light);">
+                <img src="img/play-store-qr.svg" alt="QR code linking to PaspasFood on Google Play" width="200" height="200" style="display:block;width:200px;height:200px;">
+              </a>
+              <p style="font-size:13px;font-weight:700;color:var(--dark);margin-top:12px;">Android &mdash; Google Play</p>
+            </div>
+          </div>
+          <p style="font-size:13px;color:var(--text-light);margin-top:24px;word-break:break-all;">
+            Or open <a href="https://apps.apple.com/ph/app/paspasfood/id6830440827" target="_blank" rel="noopener" style="color:var(--primary);font-weight:600;">apps.apple.com/ph/app/paspasfood/id6830440827</a><br>
+            or <a href="https://play.google.com/store/apps/details?id=com.kwng.paspasfood" target="_blank" rel="noopener" style="color:var(--primary);font-weight:600;">play.google.com/store/apps/details?id=com.kwng.paspasfood</a>
           </p>
         </div>
 
@@ -98,12 +113,35 @@
       <div class="container">
         <div style="max-width:720px;margin:0 auto;">
           <div style="text-align:center;margin-bottom:28px;">
-            <h2 style="font-size:28px;font-weight:800;color:var(--dark);margin-bottom:8px;">On iPhone?</h2>
+            <h2 style="font-size:28px;font-weight:800;color:var(--dark);margin-bottom:8px;">Already using the web version on iPhone?</h2>
             <p style="font-size:16px;color:var(--text-light);">
-              PaspasFood is not on the App Store yet. Until it is, you can install the web version
-              straight to your Home Screen &mdash; no App Store, no account needed.
+              <a href="https://apps.apple.com/ph/app/paspasfood/id6830440827" target="_blank" rel="noopener" style="color:var(--primary);font-weight:700;">PaspasFood is on the App Store</a>
+              &mdash; that is the one to get. The web version is still here and still works, so nothing
+              breaks if you carry on using it, or if you would rather not install from a store at all.
             </p>
           </div>
+
+          <!--
+            THE PWA IS NOT A LEFTOVER AND MUST NOT BE REMOVED. It is what every
+            iPhone customer has been using, and Platform.OS is 'web' there, so
+            appleSignInAvailable() returns false and Sign in with Apple never
+            renders -- see src/services/auth.ts in mobile-delivery. An account
+            created with Apple on the native app therefore cannot sign in here.
+            That asymmetry is below, in one sentence, because somebody will hit
+            it otherwise and conclude their account was deleted.
+          -->
+          <div style="margin-bottom:28px;background:#EFF6FF;border:1px solid #BFDBFE;border-radius:14px;padding:18px 20px;">
+            <p style="font-size:14px;color:#1E40AF;margin:0;line-height:1.7;">
+              <strong>One thing to know before you pick.</strong> <strong>Sign in with Apple</strong>
+              only exists in the App Store app. An account you create with it will not open the web
+              version &mdash; there is no Apple button there to sign in with. If you want to use both,
+              sign in with <strong>Google</strong> or with an <strong>email and password</strong>.
+              Everything else &mdash; your orders, addresses, Pasugo and paying on delivery &mdash;
+              is the same account either way.
+            </p>
+          </div>
+
+          <h3 style="font-size:18px;font-weight:800;color:var(--dark);margin:0 0 14px;text-align:center;">Installing the web version</h3>
 
           <div style="display:flex;gap:32px;flex-wrap:wrap;align-items:center;justify-content:center;">
             <!-- Scanning is easier than typing a URL on the phone you are installing to. -->
@@ -162,8 +200,8 @@
               <svg width="40" height="40" viewBox="0 0 24 24" fill="var(--text)"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.99 2.97 12.5 4.7 9.56C5.55 8.1 7.13 7.17 8.82 7.15C10.1 7.13 11.32 8.01 12.11 8.01C12.91 8.01 14.37 6.95 15.92 7.11C16.57 7.14 18.39 7.38 19.56 9.07C19.47 9.13 17.29 10.39 17.31 13.02C17.34 16.14 20.05 17.16 20.08 17.17C20.05 17.24 19.64 18.62 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
             </div>
             <h4 style="font-size:17px;font-weight:700;color:var(--dark);margin-bottom:6px;">iOS</h4>
-            <p style="font-size:14px;color:var(--text-light);">Requires iOS 14.0 or later</p>
-            <p style="font-size:13px;color:var(--text-lighter);margin-top:4px;">iPhone, iPad compatible</p>
+            <p style="font-size:14px;color:var(--text-light);">Requires iOS 16.4 or later</p>
+            <p style="font-size:13px;color:var(--text-lighter);margin-top:4px;">Built for iPhone &mdash; not optimised for iPad</p>
           </div>
           <div class="card" style="text-align:center;padding:32px;">
             <div style="font-size:40px;margin-bottom:12px;">
