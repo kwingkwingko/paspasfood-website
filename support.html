@@ -15,7 +15,7 @@
     .sup-name{font-size:15px;font-weight:600;color:var(--text-light);margin-top:2px}
     .sup-name:empty{display:none}
     /* White plate whatever the theme: a QR is read by contrast. */
-    .sup-qr{background:#fff;display:inline-block;padding:14px;border-radius:14px;border:1px solid var(--border,#e6e6e6);margin-top:24px}
+    .sup-qr{background:#fff;display:inline-block;padding:12px;border-radius:12px;margin-bottom:20px}
     .sup-qr img{display:block;width:240px;height:240px;object-fit:contain}
     .sup-note{font-size:14px;color:var(--text-light);line-height:1.7}
     .sup-steps{max-width:460px;margin:32px auto 0;text-align:left;padding-left:20px}
@@ -59,12 +59,27 @@
           nothing changes if you don't.
         </p>
 
+        <!--
+          ONE BOX, QR FIRST. The QR is the fastest path for anyone scanning
+          from a second device, so it leads; the number sits under it as the
+          fallback that always works. Split across two blocks, a donor had to
+          decide which one was "the" destination.
+        -->
         <div class="sup-card">
+          <!--
+            The image is dropped in alongside this page. If it is ever missing
+            the onerror hides the plate and the number below stands on its own.
+          -->
+          <div class="sup-qr">
+            <img src="img/gcash-qr.png" alt="PaspasFood GCash QR code"
+                 onerror="this.parentNode.style.display='none'">
+          </div>
+
           <div class="sup-label">GCASH NUMBER</div>
           <div class="sup-num">0916 554 5934</div>
           <!--
-            The account name goes in the div below, small and directly under
-            the number — a caption on the number rather than a second fact.
+            A caption on the number rather than a second fact, so it sits
+            directly beneath it.
 
             MASKED BY CHOICE OF THE ACCOUNT HOLDER. This is a personal GCash
             account, so the holder is a person and not "PaspasFood" — which is
@@ -88,15 +103,16 @@
           <p class="sup-note" style="margin-top:14px;font-size:13px;">
             Check the name GCash shows you before you confirm.
           </p>
+        </div>
 
-          <!--
-            The image is dropped in alongside this page. Until then the number
-            above is the whole thing that matters, and it stands on its own.
-          -->
-          <div class="sup-qr">
-            <img src="img/gcash-qr.png" alt="PaspasFood GCash QR code"
-                 onerror="this.parentNode.style.display='none'">
-          </div>
+        <!--
+          Outside the box: an instruction about the box, not part of the
+          destination.
+        -->
+        <p class="sup-note" style="text-align:center;margin-top:14px;font-size:13px;">
+          Scanning from another phone? Point it here. On this phone, screenshot it and use
+          GCash &rarr; QR &rarr; upload from gallery.
+        </p>
         </div>
 
         <ol class="sup-steps">
