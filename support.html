@@ -59,8 +59,13 @@
         <div class="sup-card">
           <div class="sup-label">GCASH NUMBER</div>
           <div class="sup-num">0916 554 5934</div>
-          <div class="sup-label" style="margin-top:18px;">ACCOUNT NAME</div>
-          <div style="font-size:18px;font-weight:700;color:var(--dark);margin-top:4px;">PaspasFood</div>
+          <!--
+            No account name printed here. This is a personal GCash number, so
+            GCash echoes a personal name — printing "PaspasFood" would make a
+            careful donor abort on a mismatch, which is the opposite of what
+            a verification line is for. Add the real registered name here and
+            the check becomes a real check.
+          -->
           <p class="sup-note" style="margin-top:14px;font-size:13px;">
             Check the name GCash shows you before you confirm.
           </p>
